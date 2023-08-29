@@ -1,10 +1,12 @@
-import operator
 import math
- 
+import operator
+
+
 class vec2d(object):
-    """2d vector class, supports vector and scalar operators,
-       and also provides a bunch of high level functions
-       """
+    """
+    2d vector class, supports vector and scalar operators,
+    and also provides a bunch of high level functions
+    """
     __slots__ = ['x', 'y']
  
     def __init__(self, x_or_pair, y = None):
