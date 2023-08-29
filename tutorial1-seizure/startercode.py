@@ -33,6 +33,7 @@ class Starter(PygameHelper):
         g = uniform(0, 255)
         b = uniform(0, 255)
         self.screen.fill((r, g, b))
-        
+
+
 s = Starter()
 s.mainLoop(40)
