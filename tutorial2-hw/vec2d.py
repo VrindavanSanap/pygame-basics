@@ -333,5 +333,4 @@ class vec2d(object):
         return (self.x,self.y)
     
     def inttup(self):
-        return (int(self.x), int(self.y))
-    
+        return (int(self.x), int(self.y)) 

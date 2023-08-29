@@ -13,6 +13,7 @@ colors = {
     "white": (255, 255, 255)
 }
 
+
 class Starter(PygameHelper):
     def __init__(self):
         self.w, self.h = 800, 600
@@ -39,13 +40,13 @@ class Starter(PygameHelper):
             offset = 35
             pygame.draw.line(self.screen ,colors["black"] ,(pos[0] , pos[1]+ offset) ,(pos[0] - rel[0] , pos[1] - rel[1]+ offset) , 5)        
             pygame.draw.line(self.screen ,colors["black"] ,(pos[0] , pos[1]- offset) ,(pos[0] - rel[0] , pos[1] - rel[1]- offset) , 5)        
-            print("DRAW")
  
         if buttons[2] == 1: ## if right mouse click erase 
             pygame.draw.circle(self.screen ,colors["white"], pos, 25) 
-            print("ERASE")
 
     def draw(self):
         pass
+
+
 s = Starter()
 s.mainLoop(40)
