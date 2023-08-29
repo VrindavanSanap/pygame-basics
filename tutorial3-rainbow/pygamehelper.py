@@ -9,6 +9,7 @@ def frange(a, b, c):
         yield t
         t += c
 
+
 def drawGraph(screen, arr, step=5):
         maxy = screen.get_height()
         for i in range(len(arr)-1):
@@ -17,6 +18,7 @@ def drawGraph(screen, arr, step=5):
             p2 = ((i+1)*step, maxy-arr[i+1])
             pygame.draw.line(screen, (0,0,0), p1, p2)
         
+
 class PygameHelper:
     def __init__(self, size=(640,480), fill=(255,255,255)):
         pygame.init()
@@ -81,4 +83,3 @@ class PygameHelper:
         
     def mouseMotion(self, buttons, pos, rel):
         pass
-        

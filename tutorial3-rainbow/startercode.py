@@ -13,6 +13,7 @@ colors = {
     "white": (255, 255, 255)
 }
 
+
 class Starter(PygameHelper):
     def __init__(self):
         self.w, self.h = 800, 600
@@ -24,8 +25,8 @@ class Starter(PygameHelper):
         self.x = 0 
       
     def update(self):
-        for event in pygame.event.get():
-            print(event)
+        pass
+
     def keyDown(self, key):
         pass 
 
@@ -33,7 +34,6 @@ class Starter(PygameHelper):
         pass
 
     def mouseUp(self, button, pos):
-        #pygame.draw.circle(self.screen, (0,0,0), pos, 20)        
         pass
         
     def mouseMotion(self, buttons, pos, rel):
@@ -58,6 +58,7 @@ class Starter(PygameHelper):
             if buttons[0] == 1:
                 self.drawcolor = self.screen.get_at(pos)
                 pygame.draw.circle(self.screen, self.drawcolor, (200, 100), 30)
+                
     def draw(self):
         pass
 

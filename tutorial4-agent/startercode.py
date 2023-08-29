@@ -30,8 +30,6 @@ class Starter(PygameHelper):
     def mouseUp(self, button, pos):
         self.target = pos
 
-        print(self.target)
-
     def mouseMotion(self, buttons, pos, rel):
         pass
         
