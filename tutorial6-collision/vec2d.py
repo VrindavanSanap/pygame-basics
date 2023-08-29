@@ -237,7 +237,7 @@ class vec2d(object):
         return self.x**2 + self.y**2
  
     def get_length(self):
-        return math.sqrt(self.x**2 + self.y**2)    
+        return math.sqrt(self.x**2 + self.y**2 + 0.0001)    
     def __setlength(self, value):
         length = self.get_length()
         self.x *= value/length
