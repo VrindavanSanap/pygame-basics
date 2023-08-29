@@ -12,7 +12,6 @@ class Agent:
         self.pos = vec2d(0, 0)
         self.target = vec2d(0, 0)
 
-
 class Starter(PygameHelper):
     def __init__(self):
         self.w, self.h = 800, 600
@@ -28,11 +27,29 @@ class Starter(PygameHelper):
          
 
     def update(self):
+        global c
         for a in self.agents:
             dir = a.target - a.pos
             if dir.length > 3:
                 dir.length = 3
                 a.pos += dir
+        for a1 in self.agents:
+            for a2 in self.agents:
+                if a1 == a2:continue
+                dist = a1.pos.get_distance(a2.pos)
+                if dist < 40:
+                    overlap = 40 - dist
+                    direction = a2.pos - a1.pos 
+                    direction.length = overlap
+                    if a1 == self.selected:
+                        a2.pos += direction
+                    elif a2 == self.selected:
+                        a1.pos -= direction
+                    else:
+                        direction.length = overlap/2
+                        a2.pos += direction
+                        a1.pos -= direction
+
 
     def keyDown(self, key):
         pass 
