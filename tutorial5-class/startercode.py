@@ -49,6 +49,7 @@ class Starter(PygameHelper):
                 dist = agent.pos.get_distance(pos)
                 if dist < 20:
                     self.selected = agent
+
     def mouseMotion(self, buttons, pos, rel):
         pass
         
