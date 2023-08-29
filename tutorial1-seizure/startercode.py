@@ -29,7 +29,10 @@ class Starter(PygameHelper):
         pass
         
     def draw(self):
-        self.screen.fill((255,255,255))
+        r = uniform(0, 255)
+        g = uniform(0, 255)
+        b = uniform(0, 255)
+        self.screen.fill((r, g, b))
         
 s = Starter()
 s.mainLoop(40)
