@@ -1,24 +1,20 @@
 #!/usr/bin/python3
 
-from pygamehelper import *
-from pygame import *
-from pygame.locals import *
-from vec2d import *
-from math import e, pi, cos, sin, sqrt
+from math import cos, e, pi, sin, sqrt
 from random import uniform
 
+from pygame import *
+from pygame.locals import *
+from pygamehelper import *
+from vec2d import *
 
-colors = {
-    "black": (0, 0, 0),
-    "white": (255, 255, 255)
-}
+colors = {"black": (0, 0, 0), "white": (255, 255, 255)}
 
 
 class Starter(PygameHelper):
     def __init__(self):
         self.w, self.h = 800, 600
-        PygameHelper.__init__(self, size=(self.w, self.h),
-                              fill=((255, 255, 255)))
+        PygameHelper.__init__(self, size=(self.w, self.h), fill=((255, 255, 255)))
         img = pygame.image.load("colors.png")
         self.screen.blit(img, (0, 0))
         self.drawcolor = colors["black"]
@@ -49,8 +45,13 @@ class Starter(PygameHelper):
                     if self.x >= 200:
                         self.x = 0
                     self.drawcolor = self.screen.get_at((self.x, 0))
-                pygame.draw.line(self.screen, self.drawcolor,
-                                 pos, (pos[0] - rel[0], pos[1] - rel[1]), 5)
+                pygame.draw.line(
+                    self.screen,
+                    self.drawcolor,
+                    pos,
+                    (pos[0] - rel[0], pos[1] - rel[1]),
+                    5,
+                )
 
             elif buttons[2] == 1:  # if right mouse click erase
                 pygame.draw.circle(self.screen, colors["white"], pos, 25)

@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
-import pygame
 import sys
+
+import pygame
 
 pygame.init()
 
@@ -24,7 +25,7 @@ while True:
 
         if keys[pygame.K_w]:
             print("'w' key is pressed!")
-          
+
         if keys[pygame.K_ESCAPE]:
             pygame.quit()
             sys.exit()
@@ -32,4 +33,3 @@ while True:
     screen.fill((0, 0, 0))
     pygame.display.flip()
     clock.tick(60)
-

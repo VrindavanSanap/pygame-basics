@@ -1,33 +1,34 @@
 #!/usr/bin/python3
 
-from pygamehelper import *
-from pygame import *
-from pygame.locals import *
-from vec2d import *
-from math import e, pi, cos, sin, sqrt
+from math import cos, e, pi, sin, sqrt
 from random import uniform
 
-class Starter(PygameHelper):
+from pygame import *
+from pygame.locals import *
+from pygamehelper import *
+from vec2d import *
 
+
+class Starter(PygameHelper):
     def __init__(self):
         self.w, self.h = 800, 600
-        PygameHelper.__init__(self, size=(self.w, self.h), fill=((255,255,255)))
+        PygameHelper.__init__(self, size=(self.w, self.h), fill=((255, 255, 255)))
 
     def update(self):
         pass
 
     def keyDown(self, key):
-        pass 
+        pass
 
     def keyUp(self, key):
         pass
 
     def mouseUp(self, button, pos):
-        pass  
-        
+        pass
+
     def mouseMotion(self, buttons, pos, rel):
         pass
-        
+
     def draw(self):
         r = uniform(0, 255)
         g = uniform(0, 255)

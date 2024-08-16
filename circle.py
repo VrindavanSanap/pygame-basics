@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 
 
-import pygame
 import sys
+
+import pygame
 
 pygame.init()
 
@@ -24,7 +25,7 @@ while running:
     screen.fill(white)
 
     # Draw a red filled circle at the center of the screen
-    circle_center = (0,0)
+    circle_center = (0, 0)
     circle_radius = 50
     pygame.draw.circle(screen, red, circle_center, circle_radius)
 
@@ -34,9 +35,7 @@ while running:
     circle_width = 2
     pygame.draw.circle(screen, red, circle_center, circle_radius, circle_width)
 
-
     pygame.display.flip()
 
 pygame.quit()
 sys.exit()
-
